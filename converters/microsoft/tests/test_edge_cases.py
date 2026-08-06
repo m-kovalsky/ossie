@@ -184,12 +184,12 @@ def test_a_malformed_unique_key_is_ignored():
     _convert(document)
 
 
-def test_an_unrecognized_datatype_is_reported_and_left_unspecified():
+def test_an_unrecognized_datatype_is_reported_and_falls_back_to_string():
     document = _model()
     document["semantic_model"][0]["datasets"][0]["fields"][0]["datatype"] = "Fictional"
     with pytest.warns(UserWarning, match="unrecognized Apache Ossie data type"):
         bim = _convert(document)
-    assert "dataType" not in bim["model"]["tables"][0]["columns"][0]
+    assert bim["model"]["tables"][0]["columns"][0]["dataType"] == "string"
 
 
 def test_a_measure_with_no_table_to_live_on_is_reported():

@@ -228,12 +228,14 @@ def test_temporal_types_power_bi_lacks_are_reported(datatype, expected):
     assert _column(_table(bim, "T"), "C")["dataType"] == "dateTime"
 
 
-def test_an_opaque_field_leaves_the_data_type_unspecified():
+def test_an_opaque_field_falls_back_to_string():
+    """An unmapped type still needs a concrete one: the engine will not load
+    a source-bound column whose ``dataType`` is absent."""
     semantic_model = _minimal()
     semantic_model["datasets"][0]["fields"][0]["datatype"] = "Opaque"
     with pytest.warns(UserWarning, match="'Opaque' has no Power BI equivalent"):
         bim = _convert(semantic_model)
-    assert "dataType" not in _column(_table(bim, "T"), "C")
+    assert _column(_table(bim, "T"), "C")["dataType"] == "string"
 
 
 # --- partitions ------------------------------------------------------------

@@ -263,7 +263,7 @@ date-only, time-only or timezone-aware member: every temporal value is stored as
 | `boolean` | `Boolean` | |
 | `dateTime` | `DateTime`, or `Date` when the format string has no time part | |
 | `binary`, `variant` | `Opaque` | no portable equivalent; reported |
-| `automatic`, `unknown` | *(omitted)* | the engine has not resolved a type |
+| `automatic`, `unknown` | *(omitted)* | the engine has not resolved a type; a source-bound column exports as `string` |
 
 Consequences worth knowing:
 
@@ -277,6 +277,10 @@ Consequences worth knowing:
   gaining a date part or losing a UTC offset respectively. Both cases are reported.
 - **`double` is not `Decimal`.** Mapping Power BI's approximate "Decimal Number" onto an
   exact decimal type would overstate its precision.
+- **An unresolved type exports as `string`.** Apache Ossie makes `datatype` optional, and
+  `Opaque` or an unrecognized name maps to nothing. TMSL treats an absent `dataType` as
+  `automatic`, which only a calculated column may carry, so a source-bound column without
+  one loads offline and is then rejected by the engine. The fallback is reported.
 - Values outside years 1900–9999 are outside the Power BI `dateTime` range, and time is
   stored at 1/300 second (about 3.33 ms) granularity.
 
