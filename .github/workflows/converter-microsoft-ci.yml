@@ -114,3 +114,39 @@ jobs:
         working-directory: converters/microsoft
         run: |
           uv run pytest tests/test_tom_integration.py -v
+
+  engine-validation:
+    name: Optional live engine validation
+    runs-on: ubuntu-latest
+    # Needs a real Fabric workspace on a real capacity, so it can only run where
+    # those credentials are configured. Forks and the ASF org have neither, and a
+    # missing secret must skip rather than fail.
+    if: vars.OSSIE_MICROSOFT_FABRIC_WORKSPACE != ''
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "${HOME}/.local/bin" >> "${GITHUB_PATH}"
+
+      - name: Sync dependencies
+        working-directory: converters/microsoft
+        run: |
+          uv sync
+
+      - name: Run live engine validation tests
+        working-directory: converters/microsoft
+        env:
+          OSSIE_MICROSOFT_FABRIC_WORKSPACE: ${{ vars.OSSIE_MICROSOFT_FABRIC_WORKSPACE }}
+          OSSIE_MICROSOFT_FABRIC_TOKEN: ${{ secrets.OSSIE_MICROSOFT_FABRIC_TOKEN }}
+          OSSIE_MICROSOFT_POWERBI_TOKEN: ${{ secrets.OSSIE_MICROSOFT_POWERBI_TOKEN }}
+        run: |
+          uv run pytest tests/test_engine_integration.py -v
