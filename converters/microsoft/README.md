@@ -80,6 +80,15 @@ result = validate_with_engine(
 result.raise_for_errors()
 ```
 
+There is also a command line entry point, which resolves tokens from the Azure CLI
+(`az login`) unless `OSSIE_MICROSOFT_FABRIC_TOKEN` and `OSSIE_MICROSOFT_POWERBI_TOKEN`
+are set; the two APIs use different token resources.
+
+```bash
+export OSSIE_MICROSOFT_FABRIC_WORKSPACE=<workspace-guid>
+uv run python scripts/validate_with_engine.py model.bim
+```
+
 Every partition is rewritten as an inline M literal of generated sample rows, so the
 refresh needs no gateway, lakehouse or stored credential; tables, columns, relationships
 and measures are otherwise untouched, so what the engine compiles is the DAX the converter
@@ -87,12 +96,24 @@ produced.
 
 This is the **only** validation in this package that leaves the local machine. It creates
 real items in a real workspace and consumes capacity, so it is opt-in, it is not part of
-the default test run, and it is deliberately not wired into CI.
+the default test run, and it is deliberately not wired into CI: it needs a tenant, a
+capacity and credentials, so it cannot run on ASF infrastructure. Point it at a scratch
+workspace, never a shared one.
 
 One behaviour is worth knowing: a measure whose DAX fails to compile is *dropped* from the
 deployed model, so referencing it by name returns no rows rather than an error. The
 validator re-evaluates the expression inline to recover the real diagnostic, because a
 silent empty result is exactly the failure mode this package exists to prevent.
+
+The two layers are complementary, not redundant:
+
+| | Offline TOM | Live engine |
+|---|---|---|
+| TMSL structure and references | yes | yes |
+| DAX syntax, functions, arity | no | yes |
+| Load-time invariants (cardinality, variations, keys) | no | yes |
+| Measure results over sample data | no | yes |
+| Needs credentials | no | yes |
 
 ## Usage
 
@@ -242,7 +263,7 @@ date-only, time-only or timezone-aware member: every temporal value is stored as
 | `boolean` | `Boolean` | |
 | `dateTime` | `DateTime`, or `Date` when the format string has no time part | |
 | `binary`, `variant` | `Opaque` | no portable equivalent; reported |
-| `automatic`, `unknown` | *(omitted)* | the engine has not resolved a type |
+| `automatic`, `unknown` | *(omitted)* | the engine has not resolved a type; a source-bound column exports as `string` |
 
 Consequences worth knowing:
 
@@ -256,6 +277,10 @@ Consequences worth knowing:
   gaining a date part or losing a UTC offset respectively. Both cases are reported.
 - **`double` is not `Decimal`.** Mapping Power BI's approximate "Decimal Number" onto an
   exact decimal type would overstate its precision.
+- **An unresolved type exports as `string`.** Apache Ossie makes `datatype` optional, and
+  `Opaque` or an unrecognized name maps to nothing. TMSL treats an absent `dataType` as
+  `automatic`, which only a calculated column may carry, so a source-bound column without
+  one loads offline and is then rejected by the engine. The fallback is reported.
 - Values outside years 1900–9999 are outside the Power BI `dateTime` range, and time is
   stored at 1/300 second (about 3.33 ms) granularity.
 
@@ -382,5 +407,3 @@ itself, and an unexercised branch is an unproven report.
 - TMDL as an alternative serialization alongside TMSL `model.bim`.
 - Optional, explicitly opt-in SQL-to-DAX translation for the subset of aggregates that
   can be translated soundly, with a hard failure on the rest.
-- An end-to-end smoke test that deploys emitted TMSL to an Analysis Services instance,
-  so the output is validated by the engine itself and not only by these tests.

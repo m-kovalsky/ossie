@@ -459,6 +459,34 @@ def test_evaluate_returns_rows(monkeypatch):
     assert error is None
 
 
+def test_evaluate_reports_a_failure_reported_with_status_200(monkeypatch):
+    """A failed DAX query comes back 200 with a per-query error and no rows.
+
+    Reading only the status code silently turns a broken measure into a null.
+    """
+    _stub_request(
+        monkeypatch,
+        lambda *a, **k: (
+            200,
+            {
+                "results": [
+                    {
+                        "tables": [{"rows": []}],
+                        "error": {
+                            "code": "QueryUserError",
+                            "message": "Cannot find table '<oii>NoSuchTable</oii>'.",
+                        },
+                    }
+                ]
+            },
+            {},
+        ),
+    )
+    rows, error = engine.evaluate("w", "d", "t", "EVALUATE 1")
+    assert rows is None
+    assert error == "Cannot find table 'NoSuchTable'."
+
+
 def test_evaluate_returns_the_engine_error(monkeypatch):
     _stub_request(
         monkeypatch, lambda *a, **k: (400, json.dumps({"error": {"message": "bad dax"}}), {})

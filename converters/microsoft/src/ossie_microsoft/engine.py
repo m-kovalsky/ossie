@@ -369,7 +369,15 @@ def evaluate(workspace, dataset, token, query):
         {"queries": [{"query": query}], "serializerSettings": {"includeNulls": True}},
     )
     if status == 200:
-        return body["results"][0]["tables"][0].get("rows", []), None
+        # A failed query still comes back 200, carrying its diagnostic in a
+        # per-query "error" object alongside an empty row set. Trusting the
+        # status code turns every broken measure into a silent null.
+        result = body["results"][0]
+        error = result.get("error")
+        if error:
+            message = error.get("message") or json.dumps(error)
+            return None, message.replace("<oii>", "").replace("</oii>", "")
+        return result["tables"][0].get("rows", []), None
     return None, _engine_message(body)
 
 

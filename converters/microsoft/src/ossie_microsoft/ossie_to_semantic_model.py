@@ -468,6 +468,18 @@ def _convert_field(field, dataset_scope, resolve_column):
     datatype = _column_datatype(field, stash, scope)
     if datatype:
         column["dataType"] = datatype
+    elif "type" not in column:
+        # Apache Ossie makes `datatype` optional, but TMSL defaults an absent
+        # `dataType` to `automatic`, which only a calculated column may carry.
+        # A source-bound column without one deserializes and passes offline
+        # validation, then fails to load on the engine, so fall back to the one
+        # type that can hold any source value.
+        column["dataType"] = "string"
+        warn(
+            scope,
+            "no data type resolved; Power BI cannot infer one for a source-bound "
+            "column, so it is typed as string",
+        )
     if field.get("description"):
         column["description"] = field["description"]
     if field.get("datatype") == "Date" and "formatString" not in stash:
@@ -551,11 +563,11 @@ def _map_datatype(datatype, scope):
     if not datatype:
         return None
     if datatype == "Opaque":
-        warn(scope, "'Opaque' has no Power BI equivalent; data type left unspecified")
+        warn(scope, "'Opaque' has no Power BI equivalent; no data type is mapped")
         return None
     tmsl_type = OSSIE_TO_TMSL_DATATYPE.get(datatype)
     if tmsl_type is None:
-        warn(scope, f"unrecognized Apache Ossie data type '{datatype}'; left unspecified")
+        warn(scope, f"unrecognized Apache Ossie data type '{datatype}'; not mapped")
         return None
     if datatype in _LOSSY_TEMPORAL:
         warn(scope, _LOSSY_TEMPORAL[datatype])
