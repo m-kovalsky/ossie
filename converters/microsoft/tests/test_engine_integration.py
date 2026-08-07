@@ -19,23 +19,22 @@
 
 These tests need a real Fabric workspace on a real capacity, so they skip
 unless one is configured. See the README for what to set.
+
+They deploy real semantic models and consume capacity, so they are not part of
+the default test run and are deliberately not wired into CI.
 """
 
 import copy
 import json
 import os
+import shutil
+import subprocess
 from pathlib import Path
 
 import pytest
 
-from ossie_microsoft import convert_ossie_to_semantic_model, validate_tmsl_on_engine
-from ossie_microsoft.engine import (
-    FABRIC_API,
-    FABRIC_RESOURCE,
-    _access_token,
-    _request,
-    evaluate_dax,
-)
+from ossie_microsoft import convert_ossie_to_semantic_model, validate_with_engine
+from ossie_microsoft.engine import FABRIC_API, _request, deploy, evaluate, refresh
 
 WORKSPACE = os.environ.get("OSSIE_MICROSOFT_FABRIC_WORKSPACE")
 if not WORKSPACE:
@@ -44,131 +43,78 @@ if not WORKSPACE:
         allow_module_level=True,
     )
 
+FABRIC_SCOPE = "https://api.fabric.microsoft.com"
+POWERBI_SCOPE = "https://analysis.windows.net/powerbi/api"
+
 HERE = Path(__file__).parent
 FIXTURE = HERE / "fixtures" / "sales_model.bim"
 
 
-def make_engine_ready(database: dict) -> dict:
-    """Correct the defects that stop ``sales_model.bim`` loading on a real engine.
-
-    The fixture is shaped for converter coverage, not for deployment: it
-    deliberately authors a backwards one-to-many relationship so the exporter's
-    orientation-normalising logic has something to normalise. Offline TOM
-    accepts all of it. A real engine does not, so the fixture is corrected here
-    rather than in-place -- editing the file would delete the coverage it exists
-    to provide.
-
-    Each edit below is a defect the engine reported and offline TOM missed.
-    """
-    database = copy.deepcopy(database)
-    model = database["model"]
-    tables = model["tables"]
-
-    # The "from" end of a relationship must be the many side unless it is
-    # one-to-one. The fixture points Calendar[Date](one) -> Sales[OrderDate](many).
-    relationships = {r["name"]: r for r in model.get("relationships", [])}
-    for relationship in relationships.values():
-        if relationship.get("fromCardinality") == "one" and (
-            relationship.get("toCardinality") != "one"
-        ):
-            relationship.update(
-                {
-                    "fromTable": relationship["toTable"],
-                    "fromColumn": relationship["toColumn"],
-                    "toTable": relationship["fromTable"],
-                    "toColumn": relationship["fromColumn"],
-                    "fromCardinality": "many",
-                    "toCardinality": "one",
-                }
-            )
-
-    # A variation must sit on the column its relationship starts from -- the fact
-    # column -- and that relationship must point at the table hosting the default
-    # hierarchy, whose table must be marked showAsVariationsOnly.
-    variations = None
-    for table in tables:
-        for column in table.get("columns", []):
-            if column.get("variations"):
-                variations = column.pop("variations")
-    if variations:
-        variations[0]["isDefault"] = True
-        target = variations[0]["defaultHierarchy"]["table"]
-        relationship = relationships.get(variations[0]["relationship"])
-        if relationship is not None:
-            relationship.update(
-                {
-                    "fromTable": "Sales",
-                    "fromColumn": "OrderDate",
-                    "toTable": target,
-                    "toColumn": "Date",
-                    "fromCardinality": "many",
-                    "toCardinality": "one",
-                }
-            )
-        for table in tables:
-            if table["name"] == "Sales":
-                for column in table["columns"]:
-                    if column["name"] == "OrderDate":
-                        column["variations"] = variations
-            if table["name"] == target:
-                table["showAsVariationsOnly"] = True
-
-    # A relationship whose endpoints do not resolve is a load failure, not a warning.
-    columns = {t["name"]: {c["name"] for c in t.get("columns", [])} for t in tables}
-    model["relationships"] = [
-        r
-        for r in relationships.values()
-        if r["fromColumn"] in columns.get(r["fromTable"], ())
-        and r["toColumn"] in columns.get(r["toTable"], ())
-    ]
-
-    # A hierarchy level without an explicit ordinal defaults to -1 and is rejected.
-    for table in tables:
-        for hierarchy in table.get("hierarchies", []):
-            for ordinal, level in enumerate(hierarchy.get("levels", [])):
-                level.setdefault("ordinal", ordinal)
-
-    return database
+def _token(env_var, resource):
+    token = os.environ.get(env_var)
+    if token:
+        return token
+    if not shutil.which("az"):
+        pytest.skip(f"set {env_var}, or install the Azure CLI and run 'az login'")
+    result = subprocess.run(  # noqa: S603
+        ["az", "account", "get-access-token", "--resource", resource, "--output", "json"],  # noqa: S607
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        pytest.skip(f"could not get a token for {resource}")
+    return json.loads(result.stdout)["accessToken"]
 
 
 @pytest.fixture(scope="module")
-def raw_sales_model():
+def fabric_token():
+    return _token("OSSIE_MICROSOFT_FABRIC_TOKEN", FABRIC_SCOPE)
+
+
+@pytest.fixture(scope="module")
+def powerbi_token():
+    return _token("OSSIE_MICROSOFT_POWERBI_TOKEN", POWERBI_SCOPE)
+
+
+@pytest.fixture
+def validate(fabric_token, powerbi_token):
+    def run(bim, name, keep=False):
+        return validate_with_engine(
+            bim,
+            workspace=WORKSPACE,
+            fabric_token=fabric_token,
+            powerbi_token=powerbi_token,
+            name=name,
+            keep=keep,
+        )
+
+    return run
+
+
+@pytest.fixture(scope="module")
+def sales_model():
     return json.loads(FIXTURE.read_text(encoding="utf-8-sig"))
 
 
-@pytest.fixture(scope="module")
-def sales_model(raw_sales_model):
-    return make_engine_ready(raw_sales_model)
-
-
-def test_the_sales_fixture_loads_and_its_measures_evaluate(sales_model):
-    result = validate_tmsl_on_engine(sales_model, name="ossie-ci-sales")
+def test_the_sales_fixture_loads_and_its_measures_evaluate(sales_model, validate):
+    result = validate(sales_model, "ossie-ci-sales")
     result.raise_for_errors()
-    assert {value.measure for value in result.values} == {"Total Sales", "Order Count"}
+    measures = {f.object for f in result.findings if f.kind == "measure"}
+    assert measures == {"Sales[Total Sales]", "Sales[Order Count]"}
 
 
-def test_the_committed_fixture_is_not_engine_loadable(raw_sales_model):
-    """Documents a known, deliberate divergence -- see :func:`make_engine_ready`.
-
-    If this ever starts failing the fixture has been made deployable, and
-    ``make_engine_ready`` should shrink to match.
-    """
-    result = validate_tmsl_on_engine(raw_sales_model, name="ossie-ci-raw")
-    assert not result.is_valid
-    assert "cardinality" in " ".join(e.message for e in result.errors).lower()
-
-
-def test_a_round_tripped_model_still_loads_and_evaluates(sales_model):
+def test_a_round_tripped_model_still_loads_and_evaluates(sales_model, validate):
     from ossie_microsoft import convert_semantic_model_to_ossie
 
     exported = convert_ossie_to_semantic_model(convert_semantic_model_to_ossie(sales_model))
-    validate_tmsl_on_engine(exported, name="ossie-ci-roundtrip").raise_for_errors()
+    validate(exported, "ossie-ci-roundtrip").raise_for_errors()
 
 
-def test_the_tpcds_example_loads():
+def test_the_tpcds_example_loads(validate):
     example = HERE.parents[2] / "examples" / "tpcds_semantic_model.yaml"
     exported = convert_ossie_to_semantic_model(example.read_text(encoding="utf-8"))
-    validate_tmsl_on_engine(exported, name="ossie-ci-tpcds").raise_for_errors()
+    validate(exported, "ossie-ci-tpcds").raise_for_errors()
 
 
 @pytest.mark.parametrize(
@@ -182,7 +128,9 @@ def test_the_tpcds_example_loads():
         ("unknown table", "SUM('NoSuchTable'[Amount])"),
     ],
 )
-def test_the_engine_rejects_dax_that_offline_tom_accepts(sales_model, label, expression):
+def test_the_engine_rejects_dax_that_offline_tom_accepts(
+    sales_model, validate, label, expression
+):
     """Every one of these deserializes and validates clean under offline TOM.
 
     That is the whole reason this layer exists: TOM never parses DAX.
@@ -191,11 +139,13 @@ def test_the_engine_rejects_dax_that_offline_tom_accepts(sales_model, label, exp
     sales = next(t for t in broken["model"]["tables"] if t["name"] == "Sales")
     sales.setdefault("measures", []).append({"name": "Broken", "expression": expression})
 
-    result = validate_tmsl_on_engine(broken, name="ossie-ci-broken")
+    result = validate(broken, "ossie-ci-broken")
     assert not result.is_valid, f"the engine accepted {label}: {expression}"
 
 
-def test_count_rejects_a_boolean_column_but_counta_does_not(sales_model):
+def test_count_rejects_a_boolean_column_but_counta_does_not(
+    sales_model, fabric_token, powerbi_token
+):
     """Evidence for the COUNT -> COUNTA mapping in the core spec.
 
     Ossie's COUNT(x) counts non-null values of any type. DAX COUNT refuses a
@@ -205,23 +155,22 @@ def test_count_rejects_a_boolean_column_but_counta_does_not(sales_model):
     sales = next(t for t in model["model"]["tables"] if t["name"] == "Sales")
     sales["columns"].append({"name": "Flag", "dataType": "boolean", "sourceColumn": "flag"})
 
-    result = validate_tmsl_on_engine(model, name="ossie-ci-count", keep=True)
-    dataset = result.diagnostics.get("dataset")
+    from ossie_microsoft.engine import build_deployable
+
+    dataset, error = deploy(
+        build_deployable(model, "ossie-ci-count"), WORKSPACE, "ossie-ci-count", fabric_token
+    )
+    assert error is None, error
     try:
-        result.raise_for_errors()
-        _rows, count_error = evaluate_dax(
-            WORKSPACE, dataset, "EVALUATE ROW(\"v\", COUNT('Sales'[Flag]))"
+        assert refresh(WORKSPACE, dataset, powerbi_token) is None
+        _rows, count_error = evaluate(
+            WORKSPACE, dataset, powerbi_token, "EVALUATE ROW(\"v\", COUNT('Sales'[Flag]))"
         )
-        rows, counta_error = evaluate_dax(
-            WORKSPACE, dataset, "EVALUATE ROW(\"v\", COUNTA('Sales'[Flag]))"
+        rows, counta_error = evaluate(
+            WORKSPACE, dataset, powerbi_token, "EVALUATE ROW(\"v\", COUNTA('Sales'[Flag]))"
         )
         assert count_error and "Boolean" in count_error
         assert counta_error is None
         assert rows[0]["[v]"] > 0
     finally:
-        if dataset:
-            _request(
-                "DELETE",
-                f"{FABRIC_API}/workspaces/{WORKSPACE}/items/{dataset}",
-                _access_token(FABRIC_RESOURCE),
-            )
+        _request("DELETE", f"{FABRIC_API}/workspaces/{WORKSPACE}/items/{dataset}", fabric_token)
