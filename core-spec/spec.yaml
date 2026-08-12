@@ -58,6 +58,19 @@ datatypes:
 vendor_name: string
 
 
+# Document-wide context for AI tools
+# Applies to every semantic model in this document. Model-level ai_context adds to
+# it and takes precedence where the two conflict.
+# Use this for guidance that governs the document as a whole — a model read in
+# isolation would otherwise have to repeat it.
+ai_context: string
+
+# Optional: Document-wide vendor-specific attributes for extensibility
+custom_extensions:
+  - vendor_name: string  # Free-form string identifying the vendor
+    data: string
+
+
 # Top-level semantic model definition
 semantic_model:
   # Required: Unique identifier for the semantic model
