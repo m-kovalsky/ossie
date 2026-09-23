@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "w06zAosP890=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mikova\\ApacheOssie\\ossie\\converters\\microsoft\\.tom\\tom-dependencies.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mikova\\.nuget\\packages\\microsoft.analysisservices\\19.114.8\\microsoft.analysisservices.19.114.8.nupkg.sha512",
+    "C:\\Users\\mikova\\.nuget\\packages\\microsoft.identity.client\\4.83.3\\microsoft.identity.client.4.83.3.nupkg.sha512",
+    "C:\\Users\\mikova\\.nuget\\packages\\microsoft.identity.client.broker\\4.83.3\\microsoft.identity.client.broker.4.83.3.nupkg.sha512",
+    "C:\\Users\\mikova\\.nuget\\packages\\microsoft.identity.client.nativeinterop\\0.20.4\\microsoft.identity.client.nativeinterop.0.20.4.nupkg.sha512",
+    "C:\\Users\\mikova\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "C:\\Users\\mikova\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "C:\\Users\\mikova\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\mikova\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

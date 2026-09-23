@@ -1,0 +1,1487 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Microsoft.AnalysisServices/19.114.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.83.3",
+          "Microsoft.Identity.Client.Broker": "4.83.3"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AnalysisServices.Core.dll": {
+            "related": ".deps.json;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.Runtime.Core.dll": {
+            "related": ".deps.json;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.Runtime.Windows.dll": {
+            "related": ".deps.json;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.Tabular.Json.dll": {
+            "related": ".deps.json;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.Tabular.dll": {
+            "related": ".deps.json;.Json.deps.json;.Json.xml;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.dll": {
+            "related": ".Core.deps.json;.Core.xml;.deps.json;.Runtime.Core.deps.json;.Runtime.Core.xml;.Runtime.Windows.deps.json;.Runtime.Windows.xml;.Tabular.deps.json;.Tabular.Json.deps.json;.Tabular.Json.xml;.Tabular.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AnalysisServices.Core.dll": {
+            "related": ".deps.json;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.Runtime.Core.dll": {
+            "related": ".deps.json;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.Runtime.Windows.dll": {
+            "related": ".deps.json;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.Tabular.Json.dll": {
+            "related": ".deps.json;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.Tabular.dll": {
+            "related": ".deps.json;.Json.deps.json;.Json.xml;.xml"
+          },
+          "lib/net8.0/Microsoft.AnalysisServices.dll": {
+            "related": ".Core.deps.json;.Core.xml;.deps.json;.Runtime.Core.deps.json;.Runtime.Core.xml;.Runtime.Windows.deps.json;.Runtime.Windows.xml;.Tabular.deps.json;.Tabular.Json.deps.json;.Tabular.Json.xml;.Tabular.xml;.xml"
+          }
+        },
+        "resource": {
+          "lib/net8.0/ar/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net8.0/ar/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net8.0/ar/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net8.0/ar/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net8.0/bg/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "bg"
+          },
+          "lib/net8.0/bg/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "bg"
+          },
+          "lib/net8.0/bg/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "bg"
+          },
+          "lib/net8.0/bg/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "bg"
+          },
+          "lib/net8.0/ca/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net8.0/ca/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net8.0/ca/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net8.0/ca/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net8.0/cs/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net8.0/cs/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net8.0/cs/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net8.0/cs/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net8.0/da/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net8.0/da/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net8.0/da/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net8.0/da/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net8.0/de/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/de/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/de/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/de/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/el/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net8.0/el/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net8.0/el/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net8.0/el/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net8.0/es/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net8.0/es/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net8.0/es/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net8.0/es/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net8.0/et/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "et"
+          },
+          "lib/net8.0/et/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "et"
+          },
+          "lib/net8.0/et/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "et"
+          },
+          "lib/net8.0/et/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "et"
+          },
+          "lib/net8.0/eu/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "eu"
+          },
+          "lib/net8.0/eu/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "eu"
+          },
+          "lib/net8.0/eu/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "eu"
+          },
+          "lib/net8.0/eu/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "eu"
+          },
+          "lib/net8.0/fi/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net8.0/fi/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net8.0/fi/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net8.0/fi/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net8.0/fr/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/fr/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/fr/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/fr/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/gl/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "gl"
+          },
+          "lib/net8.0/gl/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "gl"
+          },
+          "lib/net8.0/gl/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "gl"
+          },
+          "lib/net8.0/gl/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "gl"
+          },
+          "lib/net8.0/he/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net8.0/he/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net8.0/he/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net8.0/he/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net8.0/hi/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net8.0/hi/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net8.0/hi/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net8.0/hi/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net8.0/hr/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net8.0/hr/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net8.0/hr/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net8.0/hr/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net8.0/hu/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net8.0/hu/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net8.0/hu/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net8.0/hu/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net8.0/id/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net8.0/id/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net8.0/id/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net8.0/id/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net8.0/it/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net8.0/it/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net8.0/it/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net8.0/it/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net8.0/ja/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net8.0/ja/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net8.0/ja/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net8.0/ja/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net8.0/kk/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "kk"
+          },
+          "lib/net8.0/kk/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "kk"
+          },
+          "lib/net8.0/kk/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "kk"
+          },
+          "lib/net8.0/kk/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "kk"
+          },
+          "lib/net8.0/ko/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net8.0/ko/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net8.0/ko/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net8.0/ko/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net8.0/lt/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "lt"
+          },
+          "lib/net8.0/lt/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "lt"
+          },
+          "lib/net8.0/lt/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "lt"
+          },
+          "lib/net8.0/lt/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "lt"
+          },
+          "lib/net8.0/lv/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "lv"
+          },
+          "lib/net8.0/lv/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "lv"
+          },
+          "lib/net8.0/lv/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "lv"
+          },
+          "lib/net8.0/lv/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "lv"
+          },
+          "lib/net8.0/ms/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net8.0/ms/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net8.0/ms/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net8.0/ms/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net8.0/nl/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net8.0/nl/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net8.0/nl/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net8.0/nl/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net8.0/no/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "no"
+          },
+          "lib/net8.0/no/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "no"
+          },
+          "lib/net8.0/no/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "no"
+          },
+          "lib/net8.0/no/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "no"
+          },
+          "lib/net8.0/pl/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net8.0/pl/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net8.0/pl/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net8.0/pl/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net8.0/pt-PT/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "pt-PT"
+          },
+          "lib/net8.0/pt-PT/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "pt-PT"
+          },
+          "lib/net8.0/pt-PT/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "pt-PT"
+          },
+          "lib/net8.0/pt-PT/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "pt-PT"
+          },
+          "lib/net8.0/pt/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net8.0/pt/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net8.0/pt/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net8.0/pt/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net8.0/ro/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net8.0/ro/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net8.0/ro/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net8.0/ro/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net8.0/ru/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net8.0/ru/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net8.0/ru/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net8.0/ru/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net8.0/sk/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net8.0/sk/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net8.0/sk/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net8.0/sk/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net8.0/sl/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "sl"
+          },
+          "lib/net8.0/sl/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "sl"
+          },
+          "lib/net8.0/sl/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "sl"
+          },
+          "lib/net8.0/sl/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "sl"
+          },
+          "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "sr-Cyrl"
+          },
+          "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "sr-Cyrl"
+          },
+          "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "sr-Cyrl"
+          },
+          "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "sr-Cyrl"
+          },
+          "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "sr-Latn"
+          },
+          "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "sr-Latn"
+          },
+          "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "sr-Latn"
+          },
+          "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "sr-Latn"
+          },
+          "lib/net8.0/sv/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net8.0/sv/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net8.0/sv/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net8.0/sv/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net8.0/th/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net8.0/th/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net8.0/th/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net8.0/th/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net8.0/tr/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net8.0/tr/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net8.0/tr/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net8.0/tr/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net8.0/uk/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net8.0/uk/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net8.0/uk/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net8.0/uk/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net8.0/vi/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net8.0/vi/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net8.0/vi/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net8.0/vi/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.Core.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.Runtime.Core.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.Tabular.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Identity.Client/4.83.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "8.14.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.1",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Identity.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Identity.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Identity.Client.Broker/4.83.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.83.3",
+          "Microsoft.Identity.Client.NativeInterop": "0.20.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Broker.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Broker.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Identity.Client.NativeInterop/0.20.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.NativeInterop.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.NativeInterop.dll": {}
+        },
+        "build": {
+          "buildtransitive/netstandard2.0/Microsoft.Identity.Client.NativeInterop.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libmsalruntime.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-arm64/native/msalruntime_arm64.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/msalruntime.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-arm64/native/msalruntime_arm64.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/msalruntime.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/msalruntime_x86.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Abstractions/8.14.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.AnalysisServices/19.114.8": {
+      "sha512": "6V61ctP+/OHGCslG0nUGyoKmh3w79cHDAstD7pWTFKWaKs7787De16oIebHMnFDaJHRFyZD3FS+5hjhvotBxug==",
+      "type": "package",
+      "path": "microsoft.analysisservices/19.114.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/Microsoft.AnalysisServices.Core.dll",
+        "lib/net472/Microsoft.AnalysisServices.Core.xml",
+        "lib/net472/Microsoft.AnalysisServices.SPClient.Interfaces.dll",
+        "lib/net472/Microsoft.AnalysisServices.SPClient.Interfaces.xml",
+        "lib/net472/Microsoft.AnalysisServices.Tabular.Json.dll",
+        "lib/net472/Microsoft.AnalysisServices.Tabular.Json.xml",
+        "lib/net472/Microsoft.AnalysisServices.Tabular.dll",
+        "lib/net472/Microsoft.AnalysisServices.Tabular.xml",
+        "lib/net472/Microsoft.AnalysisServices.dll",
+        "lib/net472/Microsoft.AnalysisServices.xml",
+        "lib/net472/ar/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/ar/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/ar/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/bg/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/bg/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/bg/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/ca/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/ca/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/ca/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/cs/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/cs/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/cs/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/da/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/da/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/da/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/de/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/de/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/de/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/el/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/el/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/el/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/es/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/es/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/es/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/et/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/et/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/et/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/eu/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/eu/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/eu/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/fi/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/fi/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/fi/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/fr/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/fr/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/fr/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/gl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/gl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/gl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/he/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/he/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/he/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/hi/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/hi/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/hi/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/hr/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/hr/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/hr/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/hu/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/hu/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/hu/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/id/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/id/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/id/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/it/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/it/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/it/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/ja/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/ja/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/ja/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/kk/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/kk/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/kk/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/ko/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/ko/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/ko/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/lt/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/lt/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/lt/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/lv/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/lv/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/lv/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/ms/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/ms/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/ms/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/nl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/nl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/nl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/no/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/no/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/no/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/pl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/pl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/pl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/pt-PT/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/pt-PT/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/pt-PT/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/pt/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/pt/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/pt/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/ro/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/ro/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/ro/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/ru/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/ru/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/ru/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/sk/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/sk/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/sk/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/sl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/sl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/sl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/sr-Cyrl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/sr-Cyrl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/sr-Cyrl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/sr-Latn/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/sr-Latn/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/sr-Latn/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/sv/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/sv/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/sv/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/th/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/th/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/th/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/tr/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/tr/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/tr/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/uk/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/uk/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/uk/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/vi/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/vi/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/vi/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/zh-Hans/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/zh-Hans/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/zh-Hans/Microsoft.AnalysisServices.resources.dll",
+        "lib/net472/zh-Hant/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net472/zh-Hant/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net472/zh-Hant/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.Core.deps.json",
+        "lib/net6.0/Microsoft.AnalysisServices.Core.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.Core.xml",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Core.deps.json",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Core.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Core.xml",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Windows.deps.json",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Windows.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Windows.xml",
+        "lib/net6.0/Microsoft.AnalysisServices.Tabular.Json.deps.json",
+        "lib/net6.0/Microsoft.AnalysisServices.Tabular.Json.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.Tabular.Json.xml",
+        "lib/net6.0/Microsoft.AnalysisServices.Tabular.deps.json",
+        "lib/net6.0/Microsoft.AnalysisServices.Tabular.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.Tabular.xml",
+        "lib/net6.0/Microsoft.AnalysisServices.deps.json",
+        "lib/net6.0/Microsoft.AnalysisServices.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.xml",
+        "lib/net6.0/ar/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/ar/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ar/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/ar/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/bg/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/bg/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/bg/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/bg/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/ca/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/ca/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ca/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/ca/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/cs/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/cs/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/cs/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/cs/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/da/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/da/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/da/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/da/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/de/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/de/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/de/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/de/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/el/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/el/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/el/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/el/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/es/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/es/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/es/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/es/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/et/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/et/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/et/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/et/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/eu/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/eu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/eu/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/eu/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/fi/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/fi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/fi/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/fi/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/fr/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/fr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/fr/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/fr/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/gl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/gl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/gl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/gl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/he/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/he/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/he/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/he/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/hi/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/hi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/hi/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/hi/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/hr/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/hr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/hr/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/hr/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/hu/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/hu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/hu/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/hu/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/id/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/id/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/id/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/id/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/it/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/it/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/it/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/it/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/ja/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/ja/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ja/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/ja/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/kk/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/kk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/kk/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/kk/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/ko/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/ko/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ko/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/ko/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/lt/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/lt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/lt/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/lt/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/lv/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/lv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/lv/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/lv/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/ms/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/ms/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ms/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/ms/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/nl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/nl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/nl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/nl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/no/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/no/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/no/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/no/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/pl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/pl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/pl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/pl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/pt-PT/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/pt-PT/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/pt-PT/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/pt-PT/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/pt/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/pt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/pt/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/pt/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/ro/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/ro/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ro/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/ro/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/ru/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/ru/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ru/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/ru/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/sk/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/sk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sk/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/sk/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/sl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/sl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/sl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/sr-Cyrl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/sr-Cyrl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sr-Cyrl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/sr-Cyrl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/sr-Latn/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/sr-Latn/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sr-Latn/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/sr-Latn/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/sv/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/sv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sv/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/sv/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/th/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/th/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/th/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/th/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/tr/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/tr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/tr/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/tr/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/uk/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/uk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/uk/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/uk/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/vi/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/vi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/vi/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/vi/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/zh-Hans/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/zh-Hans/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/zh-Hans/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/zh-Hans/Microsoft.AnalysisServices.resources.dll",
+        "lib/net6.0/zh-Hant/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net6.0/zh-Hant/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/zh-Hant/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net6.0/zh-Hant/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.Core.deps.json",
+        "lib/net8.0/Microsoft.AnalysisServices.Core.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.Core.xml",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Core.deps.json",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Core.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Core.xml",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Windows.deps.json",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Windows.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Windows.xml",
+        "lib/net8.0/Microsoft.AnalysisServices.Tabular.Json.deps.json",
+        "lib/net8.0/Microsoft.AnalysisServices.Tabular.Json.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.Tabular.Json.xml",
+        "lib/net8.0/Microsoft.AnalysisServices.Tabular.deps.json",
+        "lib/net8.0/Microsoft.AnalysisServices.Tabular.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.Tabular.xml",
+        "lib/net8.0/Microsoft.AnalysisServices.deps.json",
+        "lib/net8.0/Microsoft.AnalysisServices.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.xml",
+        "lib/net8.0/ar/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/ar/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ar/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/ar/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/bg/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/bg/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/bg/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/bg/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/ca/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/ca/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ca/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/ca/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/cs/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/cs/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/cs/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/cs/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/da/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/da/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/da/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/da/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/de/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/de/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/de/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/de/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/el/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/el/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/el/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/el/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/es/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/es/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/es/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/es/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/et/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/et/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/et/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/et/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/eu/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/eu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/eu/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/eu/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/fi/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/fi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/fi/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/fi/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/fr/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/fr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/fr/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/fr/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/gl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/gl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/gl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/gl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/he/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/he/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/he/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/he/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/hi/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/hi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/hi/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/hi/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/hr/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/hr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/hr/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/hr/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/hu/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/hu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/hu/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/hu/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/id/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/id/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/id/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/id/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/it/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/it/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/it/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/it/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/ja/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/ja/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ja/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/ja/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/kk/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/kk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/kk/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/kk/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/ko/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/ko/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ko/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/ko/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/lt/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/lt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/lt/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/lt/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/lv/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/lv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/lv/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/lv/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/ms/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/ms/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ms/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/ms/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/nl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/nl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/nl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/nl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/no/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/no/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/no/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/no/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/pl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/pl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/pl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/pl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/pt-PT/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/pt-PT/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/pt-PT/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/pt-PT/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/pt/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/pt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/pt/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/pt/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/ro/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/ro/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ro/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/ro/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/ru/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/ru/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ru/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/ru/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/sk/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/sk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sk/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/sk/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/sl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/sl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/sl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/sv/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/sv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sv/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/sv/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/th/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/th/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/th/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/th/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/tr/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/tr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/tr/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/tr/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/uk/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/uk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/uk/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/uk/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/vi/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/vi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/vi/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/vi/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.Core.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.Tabular.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.resources.dll",
+        "microsoft.analysisservices.19.114.8.nupkg.sha512",
+        "microsoft.analysisservices.nuspec"
+      ]
+    },
+    "Microsoft.Identity.Client/4.83.3": {
+      "sha512": "XNJJn5uctuGvl3u6qzAof2TNysAZ/PPVKzkAglxvTO5XHgff/Ibs1+yi2G26Xrf6X/f780kS4fMKKdHcGb96hQ==",
+      "type": "package",
+      "path": "microsoft.identity.client/4.83.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Microsoft.Identity.Client.dll",
+        "lib/net462/Microsoft.Identity.Client.xml",
+        "lib/net472/Microsoft.Identity.Client.dll",
+        "lib/net472/Microsoft.Identity.Client.xml",
+        "lib/net8.0-android34.0/Microsoft.Identity.Client.aar",
+        "lib/net8.0-android34.0/Microsoft.Identity.Client.dll",
+        "lib/net8.0-android34.0/Microsoft.Identity.Client.xml",
+        "lib/net8.0-ios18.0/Microsoft.Identity.Client.dll",
+        "lib/net8.0-ios18.0/Microsoft.Identity.Client.xml",
+        "lib/net8.0/Microsoft.Identity.Client.dll",
+        "lib/net8.0/Microsoft.Identity.Client.xml",
+        "lib/netstandard2.0/Microsoft.Identity.Client.dll",
+        "lib/netstandard2.0/Microsoft.Identity.Client.xml",
+        "microsoft.identity.client.4.83.3.nupkg.sha512",
+        "microsoft.identity.client.nuspec"
+      ]
+    },
+    "Microsoft.Identity.Client.Broker/4.83.3": {
+      "sha512": "1yn682hgnCimnYR27Ne/SRMWxCWUZtCKjYwPzWbjrfhqBF1GS7bDlPZkF4yvJxl90Y+xzDdZFh4u9pcGIFSEvw==",
+      "type": "package",
+      "path": "microsoft.identity.client.broker/4.83.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Microsoft.Identity.Client.Broker.dll",
+        "lib/net462/Microsoft.Identity.Client.Broker.xml",
+        "lib/netstandard2.0/Microsoft.Identity.Client.Broker.dll",
+        "lib/netstandard2.0/Microsoft.Identity.Client.Broker.xml",
+        "microsoft.identity.client.broker.4.83.3.nupkg.sha512",
+        "microsoft.identity.client.broker.nuspec"
+      ]
+    },
+    "Microsoft.Identity.Client.NativeInterop/0.20.4": {
+      "sha512": "JHlfJ8oolxj20sNlwdIh8H8MZtzVQ55MyOjrIrQCtD/KJL5x8EOjQxafYu8AEYZOCSW+09DQnRogGk+J37BURA==",
+      "type": "package",
+      "path": "microsoft.identity.client.nativeinterop/0.20.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net462/Microsoft.Identity.Client.NativeInterop.props",
+        "buildtransitive/net462/Microsoft.Identity.Client.NativeInterop.targets",
+        "buildtransitive/netstandard2.0/Microsoft.Identity.Client.NativeInterop.targets",
+        "lib/net462/Microsoft.Identity.Client.NativeInterop.dll",
+        "lib/net9.0/Microsoft.Identity.Client.NativeInterop.dll",
+        "lib/netstandard2.0/Microsoft.Identity.Client.NativeInterop.dll",
+        "microsoft.identity.client.nativeinterop.0.20.4.nupkg.sha512",
+        "microsoft.identity.client.nativeinterop.nuspec",
+        "runtimes/linux-x64/native/libmsalruntime.so",
+        "runtimes/osx-arm64/native/msalruntime_arm64.dylib",
+        "runtimes/osx-x64/native/msalruntime.dylib",
+        "runtimes/win-arm64/native/msalruntime_arm64.dll",
+        "runtimes/win-x64/native/msalruntime.dll",
+        "runtimes/win-x86/native/msalruntime_x86.dll"
+      ]
+    },
+    "Microsoft.IdentityModel.Abstractions/8.14.0": {
+      "sha512": "iwbCpSjD3ehfTwBhtSNEtKPK0ICun6ov7Ibx6ISNA9bfwIyzI2Siwyi9eJFCJBwxowK9xcA1mj+jBWiigeqgcQ==",
+      "type": "package",
+      "path": "microsoft.identitymodel.abstractions/8.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net462/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net8.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net9.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
+        "microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.nuspec"
+      ]
+    },
+    "System.Diagnostics.DiagnosticSource/6.0.1": {
+      "sha512": "KiLYDu2k2J82Q9BJpWiuQqCkFjRBWVq4jDzKKWawVi9KWzyD0XG3cmfX0vqTQlL14Wi9EufJrbL0+KCLTbqWiQ==",
+      "type": "package",
+      "path": "system.diagnostics.diagnosticsource/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.DiagnosticSource.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net461/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net6.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net6.0/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.xml",
+        "system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Microsoft.AnalysisServices >= 19.114.8"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\mikova\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\mikova\\ApacheOssie\\ossie\\converters\\microsoft\\.tom\\tom-dependencies.csproj",
+      "projectName": "tom-dependencies",
+      "projectPath": "C:\\Users\\mikova\\ApacheOssie\\ossie\\converters\\microsoft\\.tom\\tom-dependencies.csproj",
+      "packagesPath": "C:\\Users\\mikova\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mikova\\ApacheOssie\\ossie\\converters\\microsoft\\.tom\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\mikova\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://packagefeedproxy.microsoft.io/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Microsoft.AnalysisServices": {
+            "target": "Package",
+            "version": "[19.114.8, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.423/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\bin\Release\net8.0\tom-dependencies.deps.json
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\bin\Release\net8.0\tom-dependencies.dll
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\bin\Release\net8.0\tom-dependencies.pdb
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\tom-dependencies.csproj.AssemblyReference.cache
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\tom-dependencies.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\tom-dependencies.AssemblyInfoInputs.cache
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\tom-dependencies.AssemblyInfo.cs
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\tom-dependencies.csproj.CoreCompileInputs.cache
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\tom-dependencies.sourcelink.json
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\tom-dependencies.dll
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\refint\tom-dependencies.dll
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\tom-dependencies.pdb
+C:\Users\mikova\ApacheOssie\ossie\converters\microsoft\.tom\obj\Release\net8.0\ref\tom-dependencies.dll
